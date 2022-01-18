@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        Facility Satisfaction Survey
+    </title>
+    <style>
+        main {
+            background-color: lightgray;
+            padding: 10px;
+            margin: auto;
+            width: 400px;
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+        textarea {
+            height: 50px;
+            width: 80%;
+        }
+    </style>
+</head>
+<main>
+    <div class="container" id="container-title">
+        <h1 id="title">CAMPUS FACILITY SATISFACTION SURVEY</h1>
+        <p id="description">
+            This is a Jenderal Soedirman's campus facility satisfaction survey.
+            Please answer these questions so we can improve our campus quality.
+        </p>
+    </div>
+    <div class="container" id="container-form">
+        <form id="survey-form">
+            <p class="form-description">These questions are about your identity.</p>
+            <label for="name" class="questions" id="name-label">What is your name?</label><br>
+            <input type="name" id="name" required placeholder="Enter your name"></input><br><br>
+            <label for="email" class="questions" id="email-label">What is your e-mail?</label><br>
+            <input type="email" id="email" required placeholder="enter your email"></input><br><br>
+            <label class="questions" id="major-label">What major are you in?</label><br>
+            <select class="dropdown" id="dropdown">
+                <option value="Architecture">Architecture</option>
+                <option value="Civil engineering">Civil Engineering</option>
+                <option value="Electrical Engineering"> Electrical Engineering</option>
+                <option value="Geological Engineering">Geological Engineering</option>
+                <option value="Industrial Engineering">Industrial Engineering</option>
+                <option value="Computer Science">Computer Science</option>
+            </select><br><br>
+            <label for="number" class="questions" id="number-label">What semesters are you in?</label><br>
+            <input type="number" id="number" required placeholder="7" min=1 max=14></input><br>
+            <p class="form-description">These questions are about our classrooms</p>
+            <label class="questions" id="chair-label">1. There are enough chairs in the class.</label><br>
+            <input type="radio" id="star05" name="satisfaction_chair" value="extremely_agree">
+            <label class="answers" for="star05">Extremely Agree</label><br>
+            <input type="radio" id="star04" name="satisfaction_chair" value="agree">
+            <label class="answers" for="star04">Agree</label><br>
+            <input type="radio" id="star03" name="satisfaction_chair" value="neutral">
+            <label class="answers" for="star03">Neutral</label><br>
+            <input type="radio" id="star02" name="satisfaction_chair" value="disagree">
+            <label class="answers" for="star02">Disagree</label><br>
+            <input type="radio" id="star01" name="satisfaction_chair" value="extremely_disagree">
+            <label class="answers" for="star01">Extremely Disagree</label><br>
+            <br>
+            <label class="questions" id="classroom-label">2. The clasrooms are big enough for a 40 persons class.</label><br>
+            <input type="radio" id="star05" name="satisfaction_classroom" value="extremely_agree">
+            <label class="answers" for="star05">Extremely Agree</label><br>
+            <input type="radio" id="star04" name="satisfaction_classroom" value="agree">
+            <label class="answers" for="star04">Agree</label><br>
+            <input type="radio" id="star03" name="satisfaction_classroom" value="neutral">
+            <label class="answers" for="star03">Neutral</label><br>
+            <input type="radio" id="star02" name="satisfaction_classroom" value="disagree">
+            <label class="answers" for="star02">Disagree</label><br>
+            <input type="radio" id="star01" name="satisfaction_classroom" value="extremely_disagree">
+            <label class="answers" for="star01">Extremely Disagree</label><br>
+            <br>
+            <label class="questions" id="ac-label">3. The clasrooms temperature are ideal for learning.</label><br>
+            <input type="radio" id="star05" name="satisfaction_ac" value="extremely_agree">
+            <label class="answers" for="star05">Extremely Agree</label><br>
+            <input type="radio" id="star04" name="satisfaction_ac" value="agree">
+            <label class="answers" for="star04">Agree</label><br>
+            <input type="radio" id="star03" name="satisfaction_ac" value="neutral">
+            <label class="answers" for="star03">Neutral</label><br>
+            <input type="radio" id="star02" name="satisfaction_ac" value="disagree">
+            <label class="answers" for="star02">Disagree</label><br>
+            <input type="radio" id="star01" name="satisfaction_ac" value="extremely_disagree">
+            <label class="answers" for="star01">Extremely Disagree</label><br>
+            <br>
+            <label class="questions" id="light-label">4. The clasrooms lighting are ideal for learning.</label><br>
+            <input type="radio" id="star05" name="satisfaction_light" value="extremely_agree">
+            <label class="answers" for="star05">Extremely Agree</label><br>
+            <input type="radio" id="star04" name="satisfaction_light" value="agree">
+            <label class="answers" for="star04">Agree</label><br>
+            <input type="radio" id="star03" name="satisfaction_light" value="neutral">
+            <label class="answers" for="star03">Neutral</label><br>
+            <input type="radio" id="star02" name="satisfaction_light" value="disagree">
+            <label class="answers" for="star02">Disagree</label><br>
+            <input type="radio" id="star01" name="satisfaction_light" value="extremely_disagree">
+            <label class="answers" for="star01">Extremely Disagree</label><br>
+            <br>
+            <label class="questions" id="devices-label">5. Select following devices that are available in our classrooms.</label><br>
+            <input type="checkbox" id="device01" name="devices" value="projector">
+            <label for="device01">Projector</label><br>
+            <input type="checkbox" id="device02" name="devices" value="whiteboard">
+            <label for="device02">Whiteboard</label><br>
+            <input type="checkbox" id="device03" name="devices" value="water_dispenser">
+            <label for="device03">Water Dispenser</label><br>
+            <input type="checkbox" id="device04" name="devices" value="air_conditioner">
+            <label for="device04">Air Conditioner</label><br>
+            <input type="checkbox" id="device05" name="devices" value="window_screens">
+            <label for="device05">Window Screens</label><br>
+            <label class="questions" id="advice-label">Are there other advice or comment to improve our classrooms?</label><br>
+            <textarea id="comment" form="survey-form" required placeholder="Enter your comment here"></textarea>
+            <br><br>
+            <input type="submit" id="submit"></input>
+        </form>
+    </div>
+</main>
